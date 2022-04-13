@@ -1,0 +1,3 @@
+resources:
+- test-ui-deployment.yaml
+- test-ui-svc.yaml
