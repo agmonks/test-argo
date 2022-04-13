@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  generation: 1
+  name: guestbook-ui
+spec:
+  rules:
+    - host: kubernetes.docker.internal
+      http:
+        paths:
+          - backend:
+              serviceName:  guestbook-ui
+              servicePort: 80
+            path: /
+            pathType: ImplementationSpecific
